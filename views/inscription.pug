@@ -1,0 +1,18 @@
+h3 Créer un compte
+form(action='/inscription' method='post')
+    if errors && errors.login
+        for message in errors.login
+            div #{message}
+    div
+        label(for='lastname') Nom
+        input(name='lastname' id='lastname')
+    div
+        label(for='firstname') Prénom
+        input(name='firstname' id='firstname')
+    div
+        label(for='email') Adresse e-mail
+        input(name='email' id='email' type='email')
+    div
+        label(for='password') Mot de passe
+        input(id='password' type='password' name='password')
+button(type='submit').btn.btn-block Créer un compte
