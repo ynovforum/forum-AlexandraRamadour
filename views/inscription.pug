@@ -1,0 +1,34 @@
+html
+    head
+        link(rel="stylesheet", href="/css/login.css")
+        link(rel="stylesheet", href="/css/nav.css")
+    body
+        div.topnav
+            a(href="/") Events
+            a(href="/") Browse
+            a(href="/") Your tickets
+        div.container
+        div(class="title")
+          h3 Welcome! Please register.
+        div(class="form")
+          form(method="post")
+            label(for="email") E-mail address
+            input(type="email" name="email" placeholder="aaa@aaa.com")
+            label(for="lastname") Lastname
+            input(type="text" name="lastname")
+            label(for="fistname") Firstname
+            input(type="text" name="firstname")
+            label(for="password") Password
+            input(type="password" name="password" placeholder="Password")
+            input(class="login-button" type="submit")
+        hr 
+        span(class="social") Register via social networks
+        div(class="icon")
+          button(class="twitter")
+            img(class="tw-icon" src="/icon/twitter.png")
+          button(class="facebook")
+            img(class="fa-icon" src="/icon/facebook.png")
+          button(class="pinterest")
+            img(class="pin-icon" src="/icon/pinterest.png")
+          button(class="dribbble")
+            img(class="dri-icon" src="/icon/dribbble.png")

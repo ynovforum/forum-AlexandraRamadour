@@ -1,0 +1,39 @@
+html
+    head
+        title Connexion
+        link(rel="stylesheet" href="/css/login.css")
+        link(rel="stylesheet" href="/css/nav.css")
+        link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    body
+        div.topnav
+            a(href="/") Events
+            a(href="/") Browse
+            a(href="/") Your tickets
+        div(class="container")
+            div(class="container-title")
+                h1 Welcome back! Please login.
+                div(class="login")
+                    form(method="POST")
+                        label Sign in with your e-mail address
+                        br
+                        input(type="email", id="email", name="email", placeholder="Email")
+                        label Mot de passe
+                        br
+                        input(type="password", id="mdp", name="password", placeholder="Mot de passe")
+                        br
+                        button(type="submit") Sign in to Dashboard
+                div(class="social") 
+                    h2 Login via social networks
+                        div(class="icon")
+                            button(class="twitter")
+                                img(class="tw-icon" src="/icon/twitter.png")
+                            button(class="facebook")
+                                img(class="fa-icon" src="/icon/facebook.png")
+                            button(class="pinterest")
+                                img(class="pin-icon" src="/icon/pinterest.png")
+                            button(class="dribbble")
+                                img(class="dri-icon" src="/icon/dribbble.png")
+                        div(class="end")
+                                    a(href='/inscription') Don't have an account yet ? Get Started
+                                    a(href="") Forgot Password ?

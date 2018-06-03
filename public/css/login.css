@@ -1,0 +1,167 @@
+body {
+  margin:0;
+  background-color:#eff3f6;
+  font-family:Source Sans Pro,sans-serif
+}
+
+.login {
+    background-color: white;
+    margin-left: 560px;
+    margin-right: 560px;
+    margin-top: 160px;
+    border: solid #DFE3E9 1px;
+    border-radius: 4px;
+}
+
+.account {
+    position: absolute;
+    transform: scale(3);
+    color: #1B92EC;
+    left: 50%;
+    margin-top: -15px;
+}
+
+.title {
+    background-color: #f8fafc;
+    color: #393c3e;
+    font-weight: 300;
+    font-size: 20px;
+    border-bottom: solid #DFE3E9 1px;
+    padding-top: 45px; }
+  
+h3 {
+    margin-top: 0;
+    display: flex;
+    justify-content: center; 
+}
+  
+.form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px; 
+}
+  
+form {
+    margin-top: 25px;
+    color: #393C3E;
+    font-family: #393C3E; }
+    form input {
+      padding: 10px;
+      border: solid #DFE3E9 1px;
+      border-radius: 6px;
+      background-color: #f8fafc;
+      display: inline-block;
+      margin-bottom: 1em;
+      width: 100%; }
+    form input:focus {
+      background-color: #edeff2; }
+    form span {
+      font-size: 12px;
+      font-weight: 600;
+      color: #71787E;
+      line-height: 22px; }
+    form .login {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 22px;
+      color: white;
+      padding-right: 241px;
+      background-color: #34ac45;
+      border: solid #249533 1px;
+      border-radius: 6px;
+      text-align: center; }
+    form .login:hover {
+      background-color: #1e960a; }
+    form .login:active {
+      background-color: #1a760a; }
+  
+  .social {
+    font-family: Source Sans Pro;
+    font-size: 12px;
+    color: #71787E;
+    background-color: white;
+    display: block;
+    text-align: center;
+    margin-top: -18px;
+    margin-right: 100px;
+    margin-left: 100px; }
+  
+  hr {
+    border: 0;
+    height: 0;
+    border-bottom: solid #DFE3E9 1px; }
+  
+  .icon {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 20px; }
+  
+  button {
+    transform: scale(0.9);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer; }
+  
+  .twitter {
+    background-color: #08acff; }
+  
+  .twitter:hover {
+    background-color: #4ac2ff; }
+  
+  .twitter:active {
+    background-color: #26a6e7; }
+  
+  .facebook {
+    background-color: #1382d6; }
+  
+  .facebook:hover {
+    background-color: #2391e3; }
+  
+  .facebook:active {
+    background-color: #0e65a7; }
+  
+  .pinterest {
+    background-color: #db4226; }
+  
+  .pinterest:hover {
+    background-color: #f35337; }
+  
+  .pinterest:active {
+    background-color: #ac351f; }
+  
+  .dribbble {
+    background-color: #d43471; }
+  
+  .dribbble:hover {
+    background-color: #ea4c89; }
+  
+  .dribbble:active {
+    background-color: #b32c5f; }
+  
+img {
+    transform: scale(0.5); 
+}
+  
+.end {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 560px;
+    margin-right: 560px;
+    padding-top: 10px;
+}
+  
+a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: #71787E; 
+}
+  
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+    background: url()
+}
