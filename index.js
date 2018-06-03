@@ -13,11 +13,19 @@ const db = new Sequelize('sql7240372', 'sql7240372', 'uDqPbpqsRH', {
     dialect: 'mysql'
 });
 
+const Post = db.define('post', {
+    title: { type: Sequelize.STRING },
+    question: { type: Sequelize.TEXT },
+    createdAt: {type: Sequelize.DATE},
+    resolvedAt: { type: Sequelize.DATE}
+});    
+
 const User = db.define('user', {
     email: { type: Sequelize.STRING },
     lastname: { type: Sequelize.STRING },
     firstname: { type: Sequelize.STRING },
-    mdp: { type: Sequelize.TEXT }
+    mdp: { type: Sequelize.TEXT },
+    role : { type: Sequelize.ENUM('ADMIN', 'USER' ), defaultValue: 'USER' }
 });
 
 passport.use(new LocalStrategy((email, mdp, cb) => {
@@ -72,14 +80,62 @@ app.use(passport.session());
 
 db.sync();
 
+app.get('/', (req, res) => {
+    Post
+        .findAll()
+        .then((posts) => {
+            res.render('index', { posts });
+        });
+});
+
 app.get('/login', (req, res) => {
     res.render('login');
+});
+
+app.get('/inscription', (req, res) => {
+    User
+    .findAll()
+    .then((users) => {
+        res.render('inscription', { users:users });
+    });
+});
+
+app.get('/post/:id', (req, res) => {
+    Post.findById(req.params.id)
+        .then((post) => {
+            res.render('post', {post:post});
+        }) 
+});
+
+app.post('/', (req, res) => {
+    const { title, question } = req.body;
+    Post
+        .sync()
+        .then(() => Post.create({ title, question }))
+        .then(() => res.redirect('/'));
 });
 
 app.post('/login', passport.authenticate('local', {
         successRedirect: '/',
         failureRedirect: '/login'
     }));
+
+
+app.get('/logout', (req, res) => {
+    req.logout();
+    res.redirect('/');
+});
+app.get('/liste-question', (req, res) => {
+    res.render('liste-question');
+});
+
+app.post('/inscription', (req, res) => {
+    const { email, mdp, firstname, lastname } = req.body;
+        User
+            .sync()
+            .then(() => User.create({ email, mdp, firstname, lastname, role }))
+            .then(() => res.redirect('/'));
+    });
 
 app.listen(3000, () => {
     console.log('Listening on port 3000');

@@ -1,0 +1,40 @@
+html
+  head
+    link(rel="stylesheet" href="css/list-question.css")
+    link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+
+    div(class="title")
+      h1 Recent Questions
+    div(class="container")
+      
+          div(class="question")
+            div(class="canyon")
+              img(class="canyon" src="/img/cabyon.jpeg")
+              button(class="recent") RECENT
+              h3(class="canyon title") Title
+              span(class="date") Published 2 hours ago
+              button(class="details-button") Question details   
+                     
+            div(class="techno")
+              img(class="techno" src="/img/techno.jpeg")
+              button(class="recent") RECENT
+              h3(class="techno-title") Title
+              span(class="date") Published 2 days ago
+              button(class="details-button") Question details
+            
+          div(class="liste")
+            div(class="texte")
+              div(class="title-questions")
+                h1 All Questions
+                hr(size="1")
+              div(class="tableau")
+                span(class="element") Title 
+                span(class="element") Date 
+              div(class="tableau-questions")
+                for question in posts 
+                    hr(size="1")
+                    div(class="block")
+                      span(class="title")
+                        span(class="element") #{post.title}
+                      span(class="date") #{post.createdAt}
